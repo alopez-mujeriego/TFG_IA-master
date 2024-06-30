@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>9 Prompting de Autocoherencia | Curso Interactivo de Inteligencia Artificial utilizando Shiny y Bookdown</title>
+<meta name="author" content="Ángel López-Mujeriego Collado">
+<meta name="description" content="9.1 Introducción al Prompting de Auto coherencia Aquí es donde entran los prompts de auto coherencia. El prompting de auto coherencia es una técnica que genera múltiples cadenas de pensamientos al...">
+<meta name="generator" content="bookdown 0.39 with bs4_book()">
+<meta property="og:title" content="9 Prompting de Autocoherencia | Curso Interactivo de Inteligencia Artificial utilizando Shiny y Bookdown">
+<meta property="og:type" content="book">
+<meta property="og:description" content="9.1 Introducción al Prompting de Auto coherencia Aquí es donde entran los prompts de auto coherencia. El prompting de auto coherencia es una técnica que genera múltiples cadenas de pensamientos al...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="9 Prompting de Autocoherencia | Curso Interactivo de Inteligencia Artificial utilizando Shiny y Bookdown">
+<meta name="twitter:description" content="9.1 Introducción al Prompting de Auto coherencia Aquí es donde entran los prompts de auto coherencia. El prompting de auto coherencia es una técnica que genera múltiples cadenas de pensamientos al...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link href="libs/vembedr-0.1.5/css/vembedr.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Curso Interactivo de Inteligencia Artificial utilizando Shiny y Bookdown</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Comentarios</a></li>
+<li class="book-part">INTRODUCCIÓN</li>
+<li><a class="" href="introducci%C3%B3n-a-la-aplicaci%C3%B3n.html"><span class="header-section-number">2</span> Introducción a la aplicación</a></li>
+<li class="book-part">CURSO DE INGENIERÍA DE PROMPTS</li>
+<li><a class="" href="introducci%C3%B3n.html"><span class="header-section-number">3</span> Introducción</a></li>
+<li><a class="" href="principios-de-la-ingenier%C3%ADa-de-prompts.html"><span class="header-section-number">4</span> Principios de la Ingeniería de Prompts</a></li>
+<li><a class="" href="creaci%C3%B3n-de-salidas-estructuradas-y-prompts-condicionales.html"><span class="header-section-number">5</span> Creación de Salidas Estructuradas y Prompts Condicionales</a></li>
+<li><a class="" href="t%C3%A9cnicas-de-prompting-avanzadas.html"><span class="header-section-number">6</span> Técnicas de Prompting Avanzadas</a></li>
+<li><a class="" href="prompting-de-varios-pasos.html"><span class="header-section-number">7</span> Prompting de Varios Pasos</a></li>
+<li><a class="" href="prompting-de-cadena-de-pensamiento.html"><span class="header-section-number">8</span> Prompting de Cadena de Pensamiento</a></li>
+<li><a class="active" href="prompting-de-autocoherencia.html"><span class="header-section-number">9</span> Prompting de Autocoherencia</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="prompting-de-autocoherencia" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> Prompting de Autocoherencia<a class="anchor" aria-label="anchor" href="#prompting-de-autocoherencia"><i class="fas fa-link"></i></a>
+</h1>
+<div class="justificar-texto">
+<div id="introducción-al-prompting-de-auto-coherencia" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> Introducción al Prompting de Auto coherencia<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n-al-prompting-de-auto-coherencia"><i class="fas fa-link"></i></a>
+</h2>
+<p>Aquí es donde entran los prompts de auto coherencia. El prompting de auto coherencia es una técnica que genera múltiples cadenas de pensamientos al solicitar al modelo varias veces para obtener diferentes salidas. La salida final se obtiene mediante una votación por mayoría, donde la salida o respuesta más comúnmente ocurrida entre las salidas individuales se selecciona como el resultado final.</p>
+</div>
+<div id="ejemplo-de-uso-del-prompting-de-autocoherencia" class="section level2" number="9.2">
+<h2>
+<span class="header-section-number">9.2</span> Ejemplo de Uso del Prompting de Autocoherencia<a class="anchor" aria-label="anchor" href="#ejemplo-de-uso-del-prompting-de-autocoherencia"><i class="fas fa-link"></i></a>
+</h2>
+<p>Aunque podemos implementar esta técnica solicitando manualmente al modelo varias veces y comparando los resultados, discutamos un prompt que podemos usar en su lugar. Definimos una instrucción de auto coherencia donde pedimos al modelo que imagine que varios expertos independientes están respondiendo una pregunta y la respuesta final se obtiene por mayoría de votos. Para resolver este tipo de prompts vamos a usar la aplicación 2, tal y como se ve en la Ver Figura <a href="prompting-de-autocoherencia.html#fig:CURSO-37">9.1</a>. tiene dos entradas, la del usuario, que es la que hemos venido utilizando hasta ahora y luego tiene otra entrada llamada SISTEMA DE PROMPT que puede hacer el rol de Sistema o de Asistente.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-37"></span>
+<img src="FIG37.jpg" alt="Aplicación 2: Usuario/(Sistema o Asistente)." width="60%"><p class="caption">
+Figura 9.1: Aplicación 2: Usuario/(Sistema o Asistente).
+</p>
+</div>
+<p>Este prompt debe especificar explícitamente el número de expertos involucrados, en este caso 3. Luego definimos la pregunta y el problema a resolver, un problema matemático donde necesitamos determinar el número de autos en un estacionamiento. Creamos el prompt final combinando la instrucción de auto coherencia y el problema a resolver. En la salida, el modelo da la respuesta de cada experto y agrega el resultado para proporcionar una respuesta final.</p>
+<p>Pregunta:</p>
+<p>Si hay 10 autos en el estacionamiento y llegan 3 autos más. Sale la mitad del número original de coches. Entonces, la mitad del número actual de coches llegar. ¿Cuántos coches hay en el aparcamiento?</p>
+<p>Dado que los tres expertos obtuvieron el número 12, la respuesta final es 12 tal y como se puede ver en la Figura <a href="prompting-de-autocoherencia.html#fig:CURSO-38">9.2</a>. Se puede ver que para responder a la pregunta situada en la entrada del Usuario, tiene en cuenta la información que tiene guardada en el Sistema.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-38"></span>
+<img src="FIG38.jpg" alt="Resolver el problema del auto alimentando el Sistema de Prompt." width="60%"><p class="caption">
+Figura 9.2: Resolver el problema del auto alimentando el Sistema de Prompt.
+</p>
+</div>
+</div>
+</div>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="prompting-de-cadena-de-pensamiento.html"><span class="header-section-number">8</span> Prompting de Cadena de Pensamiento</a></div>
+<div class="empty"></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#prompting-de-autocoherencia"><span class="header-section-number">9</span> Prompting de Autocoherencia</a></li>
+<li><a class="nav-link" href="#introducci%C3%B3n-al-prompting-de-auto-coherencia"><span class="header-section-number">9.1</span> Introducción al Prompting de Auto coherencia</a></li>
+<li><a class="nav-link" href="#ejemplo-de-uso-del-prompting-de-autocoherencia"><span class="header-section-number">9.2</span> Ejemplo de Uso del Prompting de Autocoherencia</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/PromptingdeAutocoherencia.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/PromptingdeAutocoherencia.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Curso Interactivo de Inteligencia Artificial utilizando Shiny y Bookdown</strong>" was written by Ángel López-Mujeriego Collado. It was last built on 2024-06-10.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>14 Generación y Explicación de Código | Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT</title>
+<meta name="author" content="Ángel López-Mujeriego Collado">
+<meta name="description" content=".figure {   text-align: center;  }  .figure .caption {   text-align: center;  }  14.1 Introducción a la Generación y Explicación de Código Las últimas aplicaciones comerciales que cubriremos son...">
+<meta name="generator" content="bookdown 0.39 with bs4_book()">
+<meta property="og:title" content="14 Generación y Explicación de Código | Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT">
+<meta property="og:type" content="book">
+<meta property="og:description" content=".figure {   text-align: center;  }  .figure .caption {   text-align: center;  }  14.1 Introducción a la Generación y Explicación de Código Las últimas aplicaciones comerciales que cubriremos son...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="14 Generación y Explicación de Código | Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT">
+<meta name="twitter:description" content=".figure {   text-align: center;  }  .figure .caption {   text-align: center;  }  14.1 Introducción a la Generación y Explicación de Código Las últimas aplicaciones comerciales que cubriremos son...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Comentarios</a></li>
+<li class="book-part">ÉTICA EN LA IA</li>
+<li><a class="" href="introducci%C3%B3n-a-la-%C3%A9tica-en-la-ia.html"><span class="header-section-number">2</span> Introducción a la Ética en la IA</a></li>
+<li class="book-part">INTRODUCCIÓN</li>
+<li><a class="" href="introducci%C3%B3n-a-la-aplicaci%C3%B3n.html"><span class="header-section-number">3</span> Introducción a la aplicación</a></li>
+<li class="book-part">CURSO DE INGENIERÍA DE PROMPTS</li>
+<li class="book-part">BLOQUE 1</li>
+<li><a class="" href="introducci%C3%B3n-1.html"><span class="header-section-number">4</span> Introducción</a></li>
+<li><a class="" href="principios-de-la-ingenier%C3%ADa-de-prompts.html"><span class="header-section-number">5</span> Principios de la Ingeniería de Prompts</a></li>
+<li><a class="" href="creaci%C3%B3n-de-salidas-estructuradas-y-prompts-condicionales.html"><span class="header-section-number">6</span> Creación de Salidas Estructuradas y Prompts Condicionales</a></li>
+<li class="book-part">BLOQUE 2</li>
+<li><a class="" href="t%C3%A9cnicas-de-prompting-avanzadas.html"><span class="header-section-number">7</span> Técnicas de Prompting Avanzadas</a></li>
+<li><a class="" href="prompting-de-varios-pasos.html"><span class="header-section-number">8</span> Prompting de Varios Pasos</a></li>
+<li><a class="" href="prompting-de-cadena-de-pensamiento.html"><span class="header-section-number">9</span> Prompting de Cadena de Pensamiento</a></li>
+<li><a class="" href="prompting-de-autocoherencia-e-ingenier%C3%ADa-de-prompts-iterativa.html"><span class="header-section-number">10</span> Prompting de Autocoherencia e Ingeniería de Prompts Iterativa</a></li>
+<li class="book-part">BLOQUE 3</li>
+<li><a class="" href="aplicaciones-comerciales-de-la-ingenier%C3%ADa-de-prompts.html"><span class="header-section-number">11</span> Aplicaciones Comerciales de la Ingeniería de Prompts</a></li>
+<li><a class="" href="transformaci%C3%B3n-de-texto.html"><span class="header-section-number">12</span> Transformación de Texto</a></li>
+<li><a class="" href="an%C3%A1lisis-de-texto.html"><span class="header-section-number">13</span> Análisis de Texto</a></li>
+<li><a class="active" href="generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo.html"><span class="header-section-number">14</span> Generación y Explicación de Código</a></li>
+<li class="book-part">BLOQUE 4</li>
+<li><a class="" href="desarrollo-de-chatbots.html"><span class="header-section-number">15</span> Desarrollo de Chatbots</a></li>
+<li><a class="" href="juego-de-roles-en-chatbots.html"><span class="header-section-number">16</span> Juego de Roles en Chatbots</a></li>
+<li><a class="" href="incorporaci%C3%B3n-de-contexto-externo-en-chatbots.html"><span class="header-section-number">17</span> Incorporación de Contexto Externo en Chatbots</a></li>
+<li class="book-part">CONCLUSIONES</li>
+<li><a class="" href="conclusi%C3%B3n-del-curso.html"><span class="header-section-number">18</span> Conclusión del Curso</a></li>
+<li><a class="" href="referencias.html"><span class="header-section-number">19</span> Referencias</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="generación-y-explicación-de-código" class="section level1" number="14">
+<h1>
+<span class="header-section-number">14</span> Generación y Explicación de Código<a class="anchor" aria-label="anchor" href="#generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo"><i class="fas fa-link"></i></a>
+</h1>
+<style>
+  .figure {
+    text-align: center;
+  }
+  .figure .caption {
+    text-align: center;
+  }
+</style>
+<div class="justificar-texto">
+<div id="introducción-a-la-generación-y-explicación-de-código" class="section level2" number="14.1">
+<h2>
+<span class="header-section-number">14.1</span> Introducción a la Generación y Explicación de Código<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n-a-la-generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo"><i class="fas fa-link"></i></a>
+</h2>
+<p>Las últimas aplicaciones comerciales que cubriremos son la generación y explicación de código. Veamos cómo generar y explicar fragmentos de código con prompts efectivos. La generación de código crea automáticamente código que resuelve un problema dado. Es esencial en cualquier dominio que utilice soluciones de software. Sin embargo, se recomienda precaución al usar LLMS para generar código ya que una comprensión sólida del código generado es esencial para su uso práctico.</p>
+</div>
+<div id="generación-de-código" class="section level2" number="14.2">
+<h2>
+<span class="header-section-number">14.2</span> Generación de Código<a class="anchor" aria-label="anchor" href="#generaci%C3%B3n-de-c%C3%B3digo"><i class="fas fa-link"></i></a>
+</h2>
+<p>Para generar código, debemos incluir en el prompt la descripción del problema, el lenguaje de programación objetivo y el formato del código generado, como script, función o clase. Por ejemplo, pedimos al modelo que escriba una función en Python que calcule el promedio de ventas por trimestre dado una lista de ventas trimestrales. El modelo genera una función llamada promedio_ventas_timestrales que recibe una lista de ventas trimestrales. Los elementos de la lista se suman y se dividen por la longitud de la lista para calcular su promedio. Finalmente, se devuelve el promedio de ventas (Figura <a href="generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo.html#fig:CURSO-57">14.1</a>).</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-57"></span>
+<img src="FIG57.jpg" alt="Generación de una función en Python dada la especificación por el usuario." width="60%"><p class="caption">
+Figura 14.1: Generación de una función en Python dada la especificación por el usuario.
+</p>
+</div>
+</div>
+<div id="ejemplos-de-entrada-y-salida-para-generación-de-programas" class="section level2" number="14.3">
+<h2>
+<span class="header-section-number">14.3</span> Ejemplos de Entrada y Salida para Generación de Programas<a class="anchor" aria-label="anchor" href="#ejemplos-de-entrada-y-salida-para-generaci%C3%B3n-de-programas"><i class="fas fa-link"></i></a>
+</h2>
+<p>En lugar de descripciones explícitas de problemas, a veces tenemos ejemplos de entrada y salida y queremos generar un programa que los mapee. Supongamos que tenemos los siguientes ejemplos de entrada y salida. Sabemos que las entradas son listas de ventas trimestrales de cuatro números cada una, pero necesitamos entender cómo se generan las salidas basadas en estas entradas. Pedimos al modelo que escriba un programa en Python que haga esto. Como podemos ver, el modelo primero establece la conexión entre las entradas y salidas al descubrir que una función de promedio mapeará cada entrada dada a la salida correspondiente. Luego, proporciona la función correspondiente y muestra cómo se aplica a los ejemplos (Figura <a href="generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo.html#fig:CURSO-58">14.2</a>).</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-58"></span>
+<img src="FIG58.jpg" alt="Generación de una función en Python dados unos ejemplos." width="60%"><p class="caption">
+Figura 14.2: Generación de una función en Python dados unos ejemplos.
+</p>
+</div>
+</div>
+<div id="modificación-de-código-existente" class="section level2" number="14.4">
+<h2>
+<span class="header-section-number">14.4</span> Modificación de Código Existente<a class="anchor" aria-label="anchor" href="#modificaci%C3%B3n-de-c%C3%B3digo-existente"><i class="fas fa-link"></i></a>
+</h2>
+<p>En lugar de pedir al modelo que genere código desde cero, podemos pedirle al modelo que modifique el código según algunos requisitos. Por ejemplo, este script en Python calcula las ventas totales a partir de una lista de ventas trimestrales y imprime la salida. Pedimos al modelo que transforme el script en una función que podamos llamar para calcular las ventas totales. El modelo genera la función solicitada que calcula las ventas totales y el script modificado que la llama en una lista de ventas trimestrales en la Figura <a href="generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo.html#fig:CURSO-59">14.3</a>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-59"></span>
+<img src="FIG59.jpg" alt="Modificar el script delimitado {} a una función para que se pueda llamar para calcular las ventas totales dadas las ventas trimestrales." width="60%"><p class="caption">
+Figura 14.3: Modificar el script delimitado {} a una función para que se pueda llamar para calcular las ventas totales dadas las ventas trimestrales.
+</p>
+</div>
+<p>Podríamos incluir múltiples modificaciones en un solo prompt. Usando el mismo script que teníamos, pediríamos al modelo que permita a los usuarios ingresar parámetros de manera interactiva y verificar si son positivos, devolviendo un mensaje de error si no lo son.</p>
+</div>
+<div id="explicación-de-código" class="section level2" number="14.5">
+<h2>
+<span class="header-section-number">14.5</span> Explicación de Código<a class="anchor" aria-label="anchor" href="#explicaci%C3%B3n-de-c%C3%B3digo"><i class="fas fa-link"></i></a>
+</h2>
+<p>Algunos fragmentos de código pueden volverse muy difíciles de interpretar, especialmente si son largos. Los LLMS pueden usarse para explicar un fragmento de código dado. Al pedir al modelo que explique un código específico, debemos dar orientación sobre nuestras expectativas para la longitud de esta explicación. Por ejemplo, podemos pedir al modelo que explique lo que hace el código en una oración y, en consecuencia, el modelo nos dará una explicación de alto nivel del propósito del código, que calcula el promedio de ventas por trimestre. También podemos pedir al modelo que explique el código en detalle. En este caso, usamos un prompt de cadena de pensamiento pidiendo al modelo que piense paso a paso. Aplicamos este prompt para el mismo código que teníamos anteriormente. El modelo tomará un fragmento de código a la vez y explicará su funcionalidad. Explica en la Figura <a href="generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo.html#fig:CURSO-60">14.4</a> paso a paso lo que ocurre en cada parte, comenzando con la definición de la función, pasando al cálculo y luego devolviendo el resultado. Finalmente, resume el propósito del código.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-60"></span>
+<img src="FIG60.jpg" alt="Explicar el código delimitado entre  {} dado en el Sistema de Prompt." width="60%"><p class="caption">
+Figura 14.4: Explicar el código delimitado entre {} dado en el Sistema de Prompt.
+</p>
+</div>
+<div style="text-align: center;">
+<h3 style="font-weight: bold; text-align: center;">
+Video Tutorial: Generación y Explicación de Código
+</h3>
+<p><iframe width="500" height="400" src="https://www.youtube-nocookie.com/embed/14ZKE8gMsQ4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="chapter-nav">
+<div class="prev"><a href="an%C3%A1lisis-de-texto.html"><span class="header-section-number">13</span> Análisis de Texto</a></div>
+<div class="next"><a href="desarrollo-de-chatbots.html"><span class="header-section-number">15</span> Desarrollo de Chatbots</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo"><span class="header-section-number">14</span> Generación y Explicación de Código</a></li>
+<li><a class="nav-link" href="#introducci%C3%B3n-a-la-generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo"><span class="header-section-number">14.1</span> Introducción a la Generación y Explicación de Código</a></li>
+<li><a class="nav-link" href="#generaci%C3%B3n-de-c%C3%B3digo"><span class="header-section-number">14.2</span> Generación de Código</a></li>
+<li><a class="nav-link" href="#ejemplos-de-entrada-y-salida-para-generaci%C3%B3n-de-programas"><span class="header-section-number">14.3</span> Ejemplos de Entrada y Salida para Generación de Programas</a></li>
+<li><a class="nav-link" href="#modificaci%C3%B3n-de-c%C3%B3digo-existente"><span class="header-section-number">14.4</span> Modificación de Código Existente</a></li>
+<li><a class="nav-link" href="#explicaci%C3%B3n-de-c%C3%B3digo"><span class="header-section-number">14.5</span> Explicación de Código</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/GeneracionyExplicaciondeCodigo.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/GeneracionyExplicaciondeCodigo.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+</div>
+  
+
+  
+
+</div>
+ <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT</strong>" was written by Ángel López-Mujeriego Collado. It was last built on 2024-06-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

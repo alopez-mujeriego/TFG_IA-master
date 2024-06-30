@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>13 Análisis de Texto | Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT</title>
+<meta name="author" content="Ángel López-Mujeriego Collado">
+<meta name="description" content=".figure {   text-align: center;  }  .figure .caption {   text-align: center;  }  13.1 Introducción al Análisis de Texto Es hora de analizar texto utilizando prompts efectivos. El análisis de texto...">
+<meta name="generator" content="bookdown 0.39 with bs4_book()">
+<meta property="og:title" content="13 Análisis de Texto | Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT">
+<meta property="og:type" content="book">
+<meta property="og:description" content=".figure {   text-align: center;  }  .figure .caption {   text-align: center;  }  13.1 Introducción al Análisis de Texto Es hora de analizar texto utilizando prompts efectivos. El análisis de texto...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="13 Análisis de Texto | Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT">
+<meta name="twitter:description" content=".figure {   text-align: center;  }  .figure .caption {   text-align: center;  }  13.1 Introducción al Análisis de Texto Es hora de analizar texto utilizando prompts efectivos. El análisis de texto...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Comentarios</a></li>
+<li class="book-part">ÉTICA EN LA IA</li>
+<li><a class="" href="introducci%C3%B3n-a-la-%C3%A9tica-en-la-ia.html"><span class="header-section-number">2</span> Introducción a la Ética en la IA</a></li>
+<li class="book-part">INTRODUCCIÓN</li>
+<li><a class="" href="introducci%C3%B3n-a-la-aplicaci%C3%B3n.html"><span class="header-section-number">3</span> Introducción a la aplicación</a></li>
+<li class="book-part">CURSO DE INGENIERÍA DE PROMPTS</li>
+<li class="book-part">BLOQUE 1</li>
+<li><a class="" href="introducci%C3%B3n-1.html"><span class="header-section-number">4</span> Introducción</a></li>
+<li><a class="" href="principios-de-la-ingenier%C3%ADa-de-prompts.html"><span class="header-section-number">5</span> Principios de la Ingeniería de Prompts</a></li>
+<li><a class="" href="creaci%C3%B3n-de-salidas-estructuradas-y-prompts-condicionales.html"><span class="header-section-number">6</span> Creación de Salidas Estructuradas y Prompts Condicionales</a></li>
+<li class="book-part">BLOQUE 2</li>
+<li><a class="" href="t%C3%A9cnicas-de-prompting-avanzadas.html"><span class="header-section-number">7</span> Técnicas de Prompting Avanzadas</a></li>
+<li><a class="" href="prompting-de-varios-pasos.html"><span class="header-section-number">8</span> Prompting de Varios Pasos</a></li>
+<li><a class="" href="prompting-de-cadena-de-pensamiento.html"><span class="header-section-number">9</span> Prompting de Cadena de Pensamiento</a></li>
+<li><a class="" href="prompting-de-autocoherencia-e-ingenier%C3%ADa-de-prompts-iterativa.html"><span class="header-section-number">10</span> Prompting de Autocoherencia e Ingeniería de Prompts Iterativa</a></li>
+<li class="book-part">BLOQUE 3</li>
+<li><a class="" href="aplicaciones-comerciales-de-la-ingenier%C3%ADa-de-prompts.html"><span class="header-section-number">11</span> Aplicaciones Comerciales de la Ingeniería de Prompts</a></li>
+<li><a class="" href="transformaci%C3%B3n-de-texto.html"><span class="header-section-number">12</span> Transformación de Texto</a></li>
+<li><a class="active" href="an%C3%A1lisis-de-texto.html"><span class="header-section-number">13</span> Análisis de Texto</a></li>
+<li><a class="" href="generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo.html"><span class="header-section-number">14</span> Generación y Explicación de Código</a></li>
+<li class="book-part">BLOQUE 4</li>
+<li><a class="" href="desarrollo-de-chatbots.html"><span class="header-section-number">15</span> Desarrollo de Chatbots</a></li>
+<li><a class="" href="juego-de-roles-en-chatbots.html"><span class="header-section-number">16</span> Juego de Roles en Chatbots</a></li>
+<li><a class="" href="incorporaci%C3%B3n-de-contexto-externo-en-chatbots.html"><span class="header-section-number">17</span> Incorporación de Contexto Externo en Chatbots</a></li>
+<li class="book-part">CONCLUSIONES</li>
+<li><a class="" href="conclusi%C3%B3n-del-curso.html"><span class="header-section-number">18</span> Conclusión del Curso</a></li>
+<li><a class="" href="referencias.html"><span class="header-section-number">19</span> Referencias</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="análisis-de-texto" class="section level1" number="13">
+<h1>
+<span class="header-section-number">13</span> Análisis de Texto<a class="anchor" aria-label="anchor" href="#an%C3%A1lisis-de-texto"><i class="fas fa-link"></i></a>
+</h1>
+<style>
+  .figure {
+    text-align: center;
+  }
+  .figure .caption {
+    text-align: center;
+  }
+</style>
+<div class="justificar-texto">
+<div id="introducción-al-análisis-de-texto" class="section level2" number="13.1">
+<h2>
+<span class="header-section-number">13.1</span> Introducción al Análisis de Texto<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n-al-an%C3%A1lisis-de-texto"><i class="fas fa-link"></i></a>
+</h2>
+<p>Es hora de analizar texto utilizando prompts efectivos. El análisis de texto es el proceso de examinar texto para extraer información relevante de él. Exploraremos técnicas de clasificación de texto y extracción de entidades, aplicándolas a datos de muestra de clientes. Nótese que los ejemplos utilizados aquí son completamente ficticios, y las empresas siempre deben buscar asesoramiento legal para comprender cuándo y cómo usar los datos de los clientes en cumplimiento con las regulaciones y leyes de privacidad.</p>
+</div>
+<div id="clasificación-de-texto" class="section level2" number="13.2">
+<h2>
+<span class="header-section-number">13.2</span> Clasificación de Texto<a class="anchor" aria-label="anchor" href="#clasificaci%C3%B3n-de-texto"><i class="fas fa-link"></i></a>
+</h2>
+<p>Comencemos con la clasificación de texto, donde el objetivo es asignar una de varias categorías potenciales a un texto específico. Una ilustración bien conocida de la clasificación de texto es el análisis de sentimientos, donde el objetivo es asignar un sentimiento como positivo, negativo o neutral a un texto proporcionado. Para clasificar textos de manera efectiva, debemos especificar las categorías de clasificación en el prompt cuando se conocen, junto con los requisitos de salida que buscamos. Por ejemplo, al pedir al modelo que clasifique el sentimiento de una reseña de reloj inteligente, mencionamos explícitamente las opciones como positivo, negativo o neutral y pedimos una respuesta de una sola palabra. El modelo responde según nuestras especificaciones. Ver Figura <a href="an%C3%A1lisis-de-texto.html#fig:CURSO-53">13.1</a>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-53"></span>
+<img src="FIG53.jpg" alt="Clasificar un texto como positivo, negativo o neutral." width="60%"><p class="caption">
+Figura 13.1: Clasificar un texto como positivo, negativo o neutral.
+</p>
+</div>
+</div>
+<div id="análisis-de-sentimientos-sin-categorías-definidas" class="section level2" number="13.3">
+<h2>
+<span class="header-section-number">13.3</span> Análisis de Sentimientos sin Categorías Definidas<a class="anchor" aria-label="anchor" href="#an%C3%A1lisis-de-sentimientos-sin-categor%C3%ADas-definidas"><i class="fas fa-link"></i></a>
+</h2>
+<p>Cuando no se especifican las categorías de clasificación, el modelo se basa en su conocimiento interno para realizar la clasificación. Supongamos que usamos el prompt del ejemplo anterior sin definir categorías. En ese caso, la salida será la misma ya que estamos buscando las salidas clásicas del análisis de sentimientos que el modelo ya conoce. Sin embargo, este enfoque no es probable que produzca resultados esperados en ejemplos más complejos. Por esta razón, es mejor práctica proporcionar clases específicas cuando sea posible.</p>
+</div>
+<div id="clasificación-de-textos-con-múltiples-clases" class="section level2" number="13.4">
+<h2>
+<span class="header-section-number">13.4</span> Clasificación de Textos con Múltiples Clases<a class="anchor" aria-label="anchor" href="#clasificaci%C3%B3n-de-textos-con-m%C3%BAltiples-clases"><i class="fas fa-link"></i></a>
+</h2>
+<p>A veces los textos pueden encajar en múltiples clases. Por ejemplo, una reseña podría expresar múltiples emociones. Dado que las emociones pueden ser diversas, es posible que no tengamos una lista completa predefinida. Podemos pedir al modelo que reconozca emociones sin proporcionarlas. Definir un número máximo de clases para listar para un texto dado es una mejor práctica en estas situaciones. Para la reseña del reloj inteligente, instruimos al modelo para que identifique un máximo de tres emociones separadas por comas. El modelo encuentra que el cliente estaba impresionado, cómodo y satisfecho (Figura <a href="an%C3%A1lisis-de-texto.html#fig:CURSO-54">13.2</a>).</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-54"></span>
+<img src="FIG54.jpg" alt=". Clasificar un texto con tres emociones." width="60%"><p class="caption">
+Figura 13.2: . Clasificar un texto con tres emociones.
+</p>
+</div>
+</div>
+<div id="extracción-de-entidades" class="section level2" number="13.5">
+<h2>
+<span class="header-section-number">13.5</span> Extracción de Entidades<a class="anchor" aria-label="anchor" href="#extracci%C3%B3n-de-entidades"><i class="fas fa-link"></i></a>
+</h2>
+<p>Otra forma de analizar texto es mediante la extracción de entidades, donde el objetivo es extraer entidades específicas de un texto dado, incluyendo nombres, lugares, organizaciones y fechas. Para extraer las entidades de manera efectiva, debemos especificar las entidades a extraer y el formato de salida deseado. En este ejemplo, tenemos una descripción de producto para un teléfono móvil y pedimos al modelo que identifique el nombre del producto, el tamaño de la pantalla y la resolución de la cámara mientras formatea la respuesta como una lista desordenada.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-55"></span>
+<img src="FIG55.jpg" alt="Ejemplo de extracción de entidades." width="60%"><p class="caption">
+Figura 13.3: Ejemplo de extracción de entidades.
+</p>
+</div>
+<p>Vemos en la Figura <a href="an%C3%A1lisis-de-texto.html#fig:CURSO-55">13.3</a> cómo el modelo extrae el nombre del producto, el tamaño de la pantalla y la resolución de la cámara, formateándolos como se solicitó.</p>
+</div>
+<div id="prompting-de-pocos-disparos-para-extracción-de-entidades" class="section level2" number="13.6">
+<h2>
+<span class="header-section-number">13.6</span> Prompting de Pocos Disparos para Extracción de Entidades<a class="anchor" aria-label="anchor" href="#prompting-de-pocos-disparos-para-extracci%C3%B3n-de-entidades"><i class="fas fa-link"></i></a>
+</h2>
+<p>Cuando las entidades y su estructura son demasiado complejas para explicarlas al modelo, podemos usar un prompt de pocos disparos. Supongamos que tenemos dos ejemplos de tickets de soporte de 2 clientes que usan una aplicación de reserva de viajes y sus entidades extraídas. Observamos que las entidades poseen una estructura compleja donde las entidades principales como detalles del cliente y de la reserva son comunes para ambos tickets. Pero cada uno de ellos está representado además por subentidades que varían dependiendo de la información encontrada en el ticket correspondiente. Por ejemplo, la entidad uno tiene teléfono, pero la entidad dos no. Supongamos que tenemos este nuevo ticket, ticket tres de un cliente llamado David y queremos extraer sus entidades de la misma manera que los dos tickets anteriores. Formulamos un prompt de pocos disparos que contiene los ejemplos de tickets, sus entidades extraídas y el nuevo ticket. El modelo en la Figura <a href="an%C3%A1lisis-de-texto.html#fig:CURSO-56">13.4</a> extrae las entidades del ticket tres siguiendo una estructura similar a los ejemplos proporcionados y capturando nuevas subentidades como el ID del cliente.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:CURSO-56"></span>
+<img src="FIG56.jpg" alt="Ejemplo de extracción de entidades con pocos disparos." width="60%"><p class="caption">
+Figura 13.4: Ejemplo de extracción de entidades con pocos disparos.
+</p>
+</div>
+<div style="text-align: center;">
+<h3 style="font-weight: bold; text-align: center;">
+Video Tutorial: Análisis de Texto
+</h3>
+<p><iframe width="500" height="400" src="https://www.youtube-nocookie.com/embed/ciVf6viBtRQ?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
+</div>
+</div>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="transformaci%C3%B3n-de-texto.html"><span class="header-section-number">12</span> Transformación de Texto</a></div>
+<div class="next"><a href="generaci%C3%B3n-y-explicaci%C3%B3n-de-c%C3%B3digo.html"><span class="header-section-number">14</span> Generación y Explicación de Código</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#an%C3%A1lisis-de-texto"><span class="header-section-number">13</span> Análisis de Texto</a></li>
+<li><a class="nav-link" href="#introducci%C3%B3n-al-an%C3%A1lisis-de-texto"><span class="header-section-number">13.1</span> Introducción al Análisis de Texto</a></li>
+<li><a class="nav-link" href="#clasificaci%C3%B3n-de-texto"><span class="header-section-number">13.2</span> Clasificación de Texto</a></li>
+<li><a class="nav-link" href="#an%C3%A1lisis-de-sentimientos-sin-categor%C3%ADas-definidas"><span class="header-section-number">13.3</span> Análisis de Sentimientos sin Categorías Definidas</a></li>
+<li><a class="nav-link" href="#clasificaci%C3%B3n-de-textos-con-m%C3%BAltiples-clases"><span class="header-section-number">13.4</span> Clasificación de Textos con Múltiples Clases</a></li>
+<li><a class="nav-link" href="#extracci%C3%B3n-de-entidades"><span class="header-section-number">13.5</span> Extracción de Entidades</a></li>
+<li><a class="nav-link" href="#prompting-de-pocos-disparos-para-extracci%C3%B3n-de-entidades"><span class="header-section-number">13.6</span> Prompting de Pocos Disparos para Extracción de Entidades</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/AnalisisdeTexto.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/AnalisisdeTexto.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Curso Interactivo de Inteligencia Artificial aplicado a la Ingeniería de Prompts con ChatGPT</strong>" was written by Ángel López-Mujeriego Collado. It was last built on 2024-06-20.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

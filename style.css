@@ -1,0 +1,51 @@
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: left;
+}
+
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+
+/* Clase para justificar texto */
+.justificar-texto {
+  text-align: justify;
+}
+
+/* No justificar los títulos principales, cabeceras y subcabeceras */
+h1, h2, h3, h4, h5, h6, h1.title {
+  text-align: left; /* Alinear a la izquierda */
+}
+
+/* No justificar el contenido del TOC flotante */
+.bookdown .page-toc {
+  text-align: left; /* Alinear a la izquierda */
+}
+
+/* Esconde el menú derecho */
+.bookdown .page-toc {
+  display: none;
+}
+
+/* Ajusta el ancho del contenido principal para ocupar el espacio del menú derecho escondido */
+.bookdown .col-content {
+  flex: 1;
+  max-width: 100%;
+}
+
+div.part .part-number, div.part h1 {
+  font-weight: bold;
+}

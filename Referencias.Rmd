@@ -1,0 +1,23 @@
+# Referencias
+<style>
+  .figure {
+    text-align: center;
+  }
+  .figure .caption {
+    text-align: center;
+  }
+</style>
+
+<div class="justificar-texto">
+
+
+* DLAI - ChatGPT Prompt Engineering for Developers. (2024). Retrieved May 14, 2024, from https://learn.deeplearning.ai/courses/chatgpt-prompt-eng/lesson/4/summarizing
+
+
+* Trad, F. (2024). ChatGPT Prompt Engineering for Developers - DataCamp Learn. https://app.datacamp.com/learn/courses/chatgpt-prompt-engineering-for-developers
+ 
+
+
+
+</div>
+

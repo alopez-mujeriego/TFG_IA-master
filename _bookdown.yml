@@ -1,0 +1,42 @@
+book_filename: "TFG_IA"
+language:
+  label:
+    fig: "Figura "
+    tab: "Tabla "
+    eq: "Ecuación "
+    thm: "Teorema "
+    part: "Parte "
+    appendix: "Apéndice "
+    chapter: "Capítulo "
+    section: "Sección "
+    subsection: "Subsección "
+    subsubsection: "Subsubsección "
+new_session: true
+before_chapter_script: _common.R
+delete_merged_file: true
+rmd_files: [
+  "index.Rmd",
+  "Etica.Rmd",
+  "intro0.Rmd",
+  "introduction.Rmd",
+  "conclusion.Rmd",
+  "conclusion1.Rmd",
+  "conclusion2.Rmd",
+  "intro2.Rmd",
+  "conclusion3.Rmd",
+  "conclusion4.Rmd",
+  "conclusion5.Rmd",
+  "PromptingdeAutocoherencia.Rmd",
+  "intro3.Rmd",
+  "AplicacionesComercialesdelaIngenieriadePrompts.Rmd",
+  "TransformaciondeTexto.Rmd",
+  "AnalisisdeTexto.Rmd",
+  "GeneracionyExplicaciondeCodigo.Rmd",
+   "intro4.Rmd",
+  "DesarrollodeChatbots.Rmd",
+  "JuegodeRolesenChatbots.Rmd",
+  "IncorporaciondeContextoExternoenChatbots.Rmd",
+  "intro5.Rmd",
+  "ConclusiondelCurso.Rmd",
+  "Referencias.Rmd"
+]
